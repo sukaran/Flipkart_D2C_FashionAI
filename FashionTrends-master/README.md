@@ -1,4 +1,4 @@
-This repository contains my work for team Maverick in DSC at University of Texas at Dallas. All code contained in this repository is my own (excluding libraries). I plan to halt this project for a while (since team members have all quit due to lack of time) and might revisit it during the summer. I have now posted it on Github with public permissions so that others may benefit.
+This repository contains my work for team Warriors at Flipkart Dare2Compete Challenge . All code contained in this repository is my own (excluding libraries). The individual files have to executed in an order, for this project to run.
 
 # FashionTrends
 This project is an effort to predict fashion trends over time using machine learning. Currently, I am able to classify different types of clothing (Shirts, Skirts, Pants, Dress) using images webscraped from chictopia.com and training a model built using Keras.
@@ -8,12 +8,12 @@ How could this project be useful? Being able to predict fashion trends would all
 ## How is this project set up
 Currently, this project is split into several files to make prototyping easier. Current workflow:
 
-`webscraper.py --> csvDownload.py --> preprocessing.py --> FashionTrends.py`
+`webscraper.py --> csvDownload.py --> preprocessing.py --> extract_weights.py --> load_weights.py --> FashionTrends.py`
 
 `webscraper.py` webscrapes chictopia.com for images and tags. `csvDownload.py` actually downloads the scraped images which are fed into `preprocessing.py` to perform image preprocessing. Finally, `FashionTrends.py` is run to actually train the model.
 
 ## Details on how it works
-I use [BeautifulSoup](https://pypi.org/project/beautifulsoup4/) to parse webpages. Then, I download the images and start preprocessing.
+I use [BeautifulSoup](https://pypi.org/project/beautifulsoup4/) to parse webpages. Then, I download the images and start preprocessing. After that, the I use pretrained models for training and classifiying the results into the 5 categories.
 
 ### Preprocessing
 If `preprocessing.py` started with this image:
